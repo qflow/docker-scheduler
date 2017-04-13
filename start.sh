@@ -15,6 +15,6 @@ while true; do
   esac
 done
 
-curl -o /etc/periodic/$PERIOD/script.sh $SCRIPT
-chmod a+x /etc/periodic/$PERIOD/script.sh
-crond -l 2 -f
+#curl -o /etc/periodic/$PERIOD/script.sh $SCRIPT
+#chmod a+x /etc/periodic/$PERIOD/script.sh
+#crond -l 2 -f
