@@ -8,3 +8,5 @@ while getopts "script:args" opt; do
             ;;
     esac
 done
+
+curl $SCRIPT
