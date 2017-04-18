@@ -18,6 +18,8 @@ echo script=$SCRIPT
 echo args=$ARGS
 echo period=$PERIOD
 
-curl -o /etc/periodic/$PERIOD/script.sh $SCRIPT
-chmod a+x /etc/periodic/$PERIOD/script.sh
+curl -o /script.sh $SCRIPT
+touch /etc/periodic/$PERIOD/init.sh
+echo ./script.sh $ARGS > /etc/periodic/$PERIOD/init.sh
+chmod a+x /etc/periodic/$PERIOD/init.sh
 crond -l 2 -f
