@@ -3,7 +3,7 @@ MAINTAINER Michal Fojtak <mfojtak@seznam.cz>
 
 RUN apk add --update curl util-linux tar && \
     rm -rf /var/cache/apk/* && \
-    curl https://get.docker.com/builds/Linux/x86_64/docker-17.05.0-ce.tgz
+    curl -o docker.tgz https://get.docker.com/builds/Linux/x86_64/docker-17.05.0-ce.tgz && tar -xvzf docker.tgz
     #cp docker/* /usr/bin/
     
 ADD start.sh /start.sh
